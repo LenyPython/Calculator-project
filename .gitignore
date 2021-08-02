@@ -11,8 +11,9 @@
 # production
 /build
 # design stuff
-design
+design/*
 style-guide.md
+*.map
 
 # misc
 .DS_Store
