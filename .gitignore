@@ -10,6 +10,9 @@
 
 # production
 /build
+# design stuff
+design
+style-guide.md
 
 # misc
 .DS_Store
