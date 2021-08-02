@@ -1,0 +1,20 @@
+#name-and-themes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#name-and-themes h1 {
+  font-size: 0.6em;
+  font-weight: 600;
+}
+#name-and-themes p {
+  font-size: 0.4em;
+}
+#name-and-themes .themes {
+  width: 50px;
+  height: 30px;
+  background: #232c43;
+}
+
+/*# sourceMappingURL=header.css.map */

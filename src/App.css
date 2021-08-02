@@ -21,5 +21,8 @@ body {
   width: 400px;
   height: 500px;
 }
+.App > * {
+  margin: 10px 0;
+}
 
 /*# sourceMappingURL=App.css.map */

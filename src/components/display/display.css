@@ -1,0 +1,14 @@
+#display {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+  background: #182034;
+  border-radius: 10px;
+  padding: 25px;
+}
+#display .value {
+  font-size: 1em;
+  margin: 0;
+}
+
+/*# sourceMappingURL=display.css.map */

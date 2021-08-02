@@ -1,11 +1,13 @@
+import './header.css'
 import React from 'react';
+import ThemeChanger from './ThemeChanger'
 
 const Header = () => {
   return (
-    <header>
+    <div id='name-and-themes'>
       <h1>calc</h1>
-      <div id='themes'></div>
-    </header>
+      <ThemeChanger />
+    </div>
   )
 }
 

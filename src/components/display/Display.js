@@ -1,10 +1,11 @@
 
 import React from 'react';
+import './display.css'
 
-const Display = () => {
+const Display = ({value}) => {
   return (
     <div id='display'>
-      <p> displayer</p>
+      <p className='value'> {value}</p>
     </div>
   )
 }

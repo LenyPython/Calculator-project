@@ -1,0 +1,14 @@
+@import '../../variables';
+
+#display {
+	width: 100%;
+	box-sizing: border-box;
+	text-align: right;
+	background: $screenBackground;
+	border-radius: 10px;
+	padding: 25px;
+	.value {
+		font-size: 1em;
+		margin: 0;
+	}
+}
