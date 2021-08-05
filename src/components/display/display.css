@@ -1,9 +1,9 @@
 #display {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 150px;
+  min-height: 150px;
   box-sizing: border-box;
   background: #182034;
   border-radius: 10px;
@@ -12,6 +12,12 @@
 #display .value {
   font-size: 1.7em;
   margin: 0;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+#display .prevValue {
+  font-size: 0.6em;
+  align-self: flex-start;
 }
 
 /*# sourceMappingURL=display.css.map */

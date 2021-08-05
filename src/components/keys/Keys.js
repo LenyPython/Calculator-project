@@ -2,30 +2,46 @@
 import './keys.css'
 import React from 'react';
 
-const Keys = ({setValue}) => {
+const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
+
+  const updateValue = event => setValue(value + event.target.innerText)
+
+  const operationClick = event => {
+    if (prevValue === '') setPrevValue(value + event.target.innerText)
+    else setPrevValue(computeOperation + event.target.innerText)
+    setValue('0')
+  }
+
+  const computeOperation = () => '555'
+
+  const clear = () => {
+    setValue('0')
+    setPrevValue('')
+  }
+
   return (
     <div id='keys'>
-      <button id='one' data-number>1</button>
-      <button id='two' data-number>2</button>
-      <button id='three' data-number>3</button>
-      <button id='four' data-number>4</button>
-      <button id='five' data-number>5</button>
-      <button id='six' data-number>6</button>
-      <button id='seven' data-number>7</button>
-      <button id='eight' data-number>8</button>
-      <button id='nine' data-number>9</button>
-      <button id='zero' data-number>0</button>
+      <button id='one' onClick={updateValue}>1</button>
+      <button id='two' onClick={updateValue}>2</button>
+      <button id='three' onClick={updateValue}>3</button>
+      <button id='four' onClick={updateValue}>4</button>
+      <button id='five' onClick={updateValue}>5</button>
+      <button id='six' onClick={updateValue}>6</button>
+      <button id='seven' onClick={updateValue}>7</button>
+      <button id='eight' onClick={updateValue}>8</button>
+      <button id='nine' onClick={updateValue}>9</button>
+      <button id='zero' onClick={updateValue}>0</button>
+      <button id='decimal' onClick={updateValue}>.</button>
 
-      <button id='add' data-operation>+</button>
-      <button id='subtract' data-operation>-</button>
-      <button id='multiply' data-operation>x</button>
-      <button id='divide' data-operation>/</button>
+      <button id='add' onClick={operationClick}>+</button>
+      <button id='subtract' onClick={operationClick}>-</button>
+      <button id='multiply' onClick={operationClick}>x</button>
+      <button id='divide' onClick={operationClick}>/</button>
 
-      <button id='decimal' data-operation>.</button>
 
-      <button id='equals' data-operation>=</button>
-      <button id='reset' data-operation>Reset</button>
-      <button id='del' data-operation>Del</button>
+      <button id='equals' data-equals>=</button>
+      <button id='reset' onClick={clear} data-reset>Reset</button>
+      <button id='del' data-delete>Del</button>
 
     </div>
   )

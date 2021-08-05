@@ -6,7 +6,7 @@ import Display from './components/display/Display'
 import Keys from './components/keys/Keys'
 
 function App() {
-  const [value, setValue] = useState('0')
+  const calcMemo = useCalcMemo('0');
   useEffect(() => null, [])
 
 
@@ -14,13 +14,25 @@ function App() {
     <div className="App">
       <Header />
       <Display
-        value={value}
+        calcMemo={calcMemo}
       />
       <Keys
-        setValue={setValue}
+        calcMemo={calcMemo}
       />
     </div>
   );
 }
 
 export default App;
+
+const useCalcMemo = (state) => {
+  const [value, setValue] = useState(state)
+  const [prevValue, setPrevValue] = useState('')
+
+  return {
+    value,
+    setValue,
+    prevValue,
+    setPrevValue
+  }
+}

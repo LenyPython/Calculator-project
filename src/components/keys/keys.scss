@@ -19,6 +19,7 @@ $btnHeight: 60px;
 	"dot zero divide multiply"
 	"reset reset equals equals";
 	button {
+		cursor: pointer;
 		font-size: $fontSize;
 		width: $btnWidth;
 		height: $btnHeight;
