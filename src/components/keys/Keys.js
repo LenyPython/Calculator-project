@@ -4,15 +4,46 @@ import React from 'react';
 
 const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
 
-  const updateValue = event => setValue(value + event.target.innerText)
-
+  const updateValue = event => {
+    let sign = event.target.innerText.toString()
+    if (value === '0') {
+      if (sign === '.') setValue('0.')
+      else setValue(sign)
+    }
+    else {
+      if (sign === '.' & value.includes(sign)) return
+      setValue(value + sign)
+    }
+  }
   const operationClick = event => {
     if (prevValue === '') setPrevValue(value + event.target.innerText)
-    else setPrevValue(computeOperation + event.target.innerText)
+    else setPrevValue(computeOperation() + event.target.innerText)
     setValue('0')
   }
 
-  const computeOperation = () => '555'
+  const computeOperation = () => {
+    let result
+    let a = parseFloat(prevValue), b = parseFloat(value)
+    console.log(prevValue[prevValue.length - 1])
+    switch (prevValue[prevValue.length - 1]) {
+      case '+':
+        result = a + b
+      case '-':
+        result = a - b
+      case 'x':
+        result = a * b
+      case '/':
+        result = a / b
+      default:
+        result = b
+    }
+    console.log(a, b, result)
+    setValue(result.toString())
+    setPrevValue('')
+  }
+  const deleteNum = () => {
+    value.slice(0, -1).length > 0 ? setValue(value.slice(0, -1)) : setValue('0')
+  }
 
   const clear = () => {
     setValue('0')
@@ -39,9 +70,9 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
       <button id='divide' onClick={operationClick}>/</button>
 
 
-      <button id='equals' data-equals>=</button>
+      <button id='equals' onClick={computeOperation}>=</button>
       <button id='reset' onClick={clear} data-reset>Reset</button>
-      <button id='del' data-delete>Del</button>
+      <button id='del' onClick={deleteNum}>Del</button>
 
     </div>
   )

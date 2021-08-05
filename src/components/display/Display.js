@@ -2,7 +2,7 @@
 import React from 'react';
 import './display.css'
 
-const Display = ({value, prevValue}) => {
+const Display = ({calcMemo: {value, prevValue}}) => {
   return (
     <div id='display'>
       <p className='prevValue'> {prevValue}</p>
