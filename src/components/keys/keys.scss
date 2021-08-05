@@ -81,7 +81,7 @@ $btnHeight: 60px;
 	grid-area: equals;
 	background: $keyBackgroundToggle;
 }
-#reset {
+#clear {
 	@extend.buttonText;
 	grid-area: reset;
 	background: $keyBackground;

@@ -79,7 +79,7 @@
   grid-area: dot;
 }
 
-.buttonText, #del, #reset, #equals {
+.buttonText, #del, #clear, #equals {
   color: white;
   text-transform: uppercase;
 }
@@ -89,7 +89,7 @@
   background: #d03f2f;
 }
 
-#reset {
+#clear {
   grid-area: reset;
   background: #637097;
 }

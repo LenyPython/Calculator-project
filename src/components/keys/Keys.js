@@ -4,9 +4,10 @@ import React from 'react';
 
 const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
 
-  const updateValue = event => {
+  const numberClick = event => {
     let sign = event.target.innerText.toString()
-    if (value === '0') {
+    if (value.length > 9) return
+    if (value === '0' || value == '') {
       if (sign === '.') setValue('0.')
       else setValue(sign)
     }
@@ -15,54 +16,81 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
       setValue(value + sign)
     }
   }
+
   const operationClick = event => {
-    if (prevValue === '') setPrevValue(value + event.target.innerText)
-    else setPrevValue(computeOperation() + event.target.innerText)
-    setValue('0')
+    let operation = event.target.innerText.toString()
+    if (prevValue === '') {
+      setPrevValue(value + operation)
+      setValue('')
+      return
+    }
+    if (value == '' || value == '-') {
+      if (operation == '-') {
+        setValue('-')
+        return
+      } else {
+        setPrevValue(prevValue.slice(0, -1) + operation)
+        return
+      }
+    }
+    let result = computeOperation()
+    setPrevValue(result + operation)
+    setValue('')
   }
 
   const computeOperation = () => {
     let result
     let a = parseFloat(prevValue), b = parseFloat(value)
-    console.log(prevValue[prevValue.length - 1])
+    if (isNaN(a) || isNaN(b)) return
     switch (prevValue[prevValue.length - 1]) {
       case '+':
         result = a + b
+        break;
       case '-':
         result = a - b
+        break;
       case 'x':
         result = a * b
+        break;
       case '/':
         result = a / b
+        break;
       default:
-        result = b
+        return
     }
-    console.log(a, b, result)
-    setValue(result.toString())
-    setPrevValue('')
+    return result.toString().slice(0, 10)
   }
+
+  const handleEquals = () => {
+    let result = computeOperation()
+    if (result !== undefined) {
+      setValue(result)
+      setPrevValue('')
+    }
+  }
+
   const deleteNum = () => {
     value.slice(0, -1).length > 0 ? setValue(value.slice(0, -1)) : setValue('0')
   }
 
-  const clear = () => {
+  const reset = () => {
     setValue('0')
     setPrevValue('')
   }
 
   return (
     <div id='keys'>
-      <button id='one' onClick={updateValue}>1</button>
-      <button id='two' onClick={updateValue}>2</button>
-      <button id='three' onClick={updateValue}>3</button>
-      <button id='four' onClick={updateValue}>4</button>
-      <button id='five' onClick={updateValue}>5</button>
-      <button id='six' onClick={updateValue}>6</button>
-      <button id='seven' onClick={updateValue}>7</button>
-      <button id='eight' onClick={updateValue}>8</button>
-      <button id='nine' onClick={updateValue}>9</button>
-      <button id='zero' onClick={updateValue}>0</button>
-      <button id='decimal' onClick={updateValue}>.</button>
+      <button id='one' onClick={numberClick}>1</button>
+      <button id='two' onClick={numberClick}>2</button>
+      <button id='three' onClick={numberClick}>3</button>
+      <button id='four' onClick={numberClick}>4</button>
+      <button id='five' onClick={numberClick}>5</button>
+      <button id='six' onClick={numberClick}>6</button>
+      <button id='seven' onClick={numberClick}>7</button>
+      <button id='eight' onClick={numberClick}>8</button>
+      <button id='nine' onClick={numberClick}>9</button>
+      <button id='zero' onClick={numberClick}>0</button>
+      <button id='decimal' onClick={numberClick}>.</button>
 
       <button id='add' onClick={operationClick}>+</button>
       <button id='subtract' onClick={operationClick}>-</button>
@@ -70,8 +98,8 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
       <button id='divide' onClick={operationClick}>/</button>
 
 
-      <button id='equals' onClick={computeOperation}>=</button>
-      <button id='reset' onClick={clear} data-reset>Reset</button>
+      <button id='equals' onClick={handleEquals}>=</button>
+      <button id='clear' onClick={reset} data-reset>Reset</button>
       <button id='del' onClick={deleteNum}>Del</button>
 
     </div>
