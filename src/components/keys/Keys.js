@@ -29,6 +29,7 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
         setValue('-')
         return
       } else {
+        setValue('')
         setPrevValue(prevValue.slice(0, -1) + operation)
         return
       }
@@ -70,7 +71,7 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
   }
 
   const deleteNum = () => {
-    value.slice(0, -1).length > 0 ? setValue(value.slice(0, -1)) : setValue('0')
+    setValue(value.slice(0, -1))
   }
 
   const reset = () => {
