@@ -7,7 +7,7 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
   const numberClick = event => {
     let sign = event.target.innerText.toString()
     if (value.length > 9) return
-    if (value === '0' || value == '') {
+    if (value === '0' || value === '') {
       if (sign === '.') setValue('0.')
       else setValue(sign)
     }
@@ -24,8 +24,8 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
       setValue('')
       return
     }
-    if (value == '' || value == '-') {
-      if (operation == '-') {
+    if (value === '' || value === '-') {
+      if (operation === '-') {
         setValue('-')
         return
       } else {
