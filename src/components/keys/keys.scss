@@ -1,15 +1,15 @@
 @import '../../variables';
 $btnWidth: 100%;
-$btnHeight: 50px;
+$btnHeight: 60px;
 
 #keys{
 	background: $toggleBackground;
 	width: 100%;
 	border-radius: 10px;
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 25px;
 	display: grid;
-	gap: 10px;
+	gap: 25px;
 	justify-items: center;
 	align-items: center;
 	grid-template-areas: 
@@ -22,6 +22,8 @@ $btnHeight: 50px;
 		font-size: $fontSize;
 		width: $btnWidth;
 		height: $btnHeight;
+		border-radius: 10px;
+		border:none;
 	}
 }
 #one {
@@ -69,12 +71,22 @@ $btnHeight: 50px;
 #decimal {
 	grid-area: dot;
 }
+.buttonText{
+	color: $textWhite;
+	text-transform: uppercase;
+}
 #equals {
+	@extend.buttonText;
 	grid-area: equals;
+	background: $keyBackgroundToggle;
 }
 #reset {
+	@extend.buttonText;
 	grid-area: reset;
+	background: $keyBackground;
 }
 #del {
+	@extend.buttonText;
 	grid-area: del;
+	background: $keyBackground;
 }

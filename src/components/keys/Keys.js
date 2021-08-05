@@ -18,7 +18,7 @@ const Keys = ({setValue}) => {
 
       <button id='add' data-operation>+</button>
       <button id='subtract' data-operation>-</button>
-      <button id='multiply' data-operation>*</button>
+      <button id='multiply' data-operation>x</button>
       <button id='divide' data-operation>/</button>
 
       <button id='decimal' data-operation>.</button>

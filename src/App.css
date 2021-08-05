@@ -14,12 +14,11 @@ body {
 }
 
 .App {
-  border: 1px solid white;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 700px;
 }
 .App > * {
   margin: 10px 0;
