@@ -36,17 +36,35 @@ Users should be able to:
 ### What I learned
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<button id='one' onClick={numberClick}>1</button>
+<button id='two' onClick={numberClick}>2</button>
+...
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+display: grid;
+gap: 25px;
+justify-items: center;
+align-items: center;
+grid-template-areas: 
+"seven eight nine del"
+"four five six add"
+"one two three subtract"
+"dot zero divide multiply"
+"reset reset equals equals";
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const useCalcMemo = (state) => {
+  const [value, setValue] = useState(state)
+  const [prevValue, setPrevValue] = useState('')
+
+  return {
+    value,
+    setValue,
+    prevValue,
+    setPrevValue
+  }
 }
+const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {...}
 ```
 
 ### Useful resources
