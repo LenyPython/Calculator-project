@@ -5,6 +5,7 @@
   box-sizing: border-box;
   padding: 25px;
   display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 25px;
   justify-items: center;
   align-items: center;
@@ -13,9 +14,12 @@
 #keys button {
   cursor: pointer;
   font-size: 32px;
+  font-weight: 700;
+  color: #444b5a;
   width: 100%;
   height: 60px;
   border-radius: 10px;
+  box-shadow: 0 5px 0 0 #b4a597;
   border: none;
 }
 
@@ -80,23 +84,27 @@
 }
 
 .buttonText, #del, #clear, #equals {
-  color: white;
+  font-size: 0.7em !important;
+  color: white !important;
   text-transform: uppercase;
 }
 
 #equals {
   grid-area: equals;
   background: #d03f2f;
+  box-shadow: 0 5px 0 0 #93261a !important;
 }
 
 #clear {
   grid-area: reset;
   background: #637097;
+  box-shadow: 0 5px 0 0 #404e72 !important;
 }
 
 #del {
   grid-area: del;
   background: #637097;
+  box-shadow: 0 5px 0 0 #404e72 !important;
 }
 
 /*# sourceMappingURL=keys.css.map */

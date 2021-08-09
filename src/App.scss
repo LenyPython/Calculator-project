@@ -1,12 +1,23 @@
 @import 'variables';
 
+
 body {
+	--theme1-bg: #{$mainBackground};
+	--theme1-text: #{$textWhite};
+	&[theme=theme2]{
+	--theme1-bg: #{$mainBackground2};
+	--theme1-text: #{$textWhite};
+	}
+	&[theme=theme3]{
+	--theme1-bg: #{$mainBackground3};
+	--theme1-text: #{$textWhite};
+	}
 	margin: 0;
 	padding: 0;
 	min-width: 100vw;
 	min-height: 100vh;
-	background: $mainBackground;
-	color: $textWhite;
+	background: var(--theme1-bg);
+	color: var(--theme1-text);
 	font-size: $fontSize;
 	font-weight: $fontWeight;
 	font-family: $fontFamily;
@@ -19,7 +30,7 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-	width: 500px;
+	width: 550px;
 	height: 700px;
 	& > * {
 		margin: 10px 0;

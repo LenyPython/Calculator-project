@@ -9,6 +9,7 @@ $btnHeight: 60px;
 	box-sizing: border-box;
 	padding: 25px;
 	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 25px;
 	justify-items: center;
 	align-items: center;
@@ -21,9 +22,12 @@ $btnHeight: 60px;
 	button {
 		cursor: pointer;
 		font-size: $fontSize;
+		font-weight: $fontWeight;
+		color: $textGrayish;
 		width: $btnWidth;
 		height: $btnHeight;
 		border-radius: 10px;
+		box-shadow: 0 5px 0 0 $keyShadowOther;
 		border:none;
 	}
 }
@@ -73,21 +77,25 @@ $btnHeight: 60px;
 	grid-area: dot;
 }
 .buttonText{
-	color: $textWhite;
+	font-size: .7em !important;
+	color: $textWhite !important;
 	text-transform: uppercase;
 }
 #equals {
 	@extend.buttonText;
 	grid-area: equals;
 	background: $keyBackgroundToggle;
+	box-shadow: 0 5px 0 0 $keyShadowToggle !important;
 }
 #clear {
 	@extend.buttonText;
 	grid-area: reset;
 	background: $keyBackground;
+	box-shadow: 0 5px 0 0 $keyShadow !important;
 }
 #del {
 	@extend.buttonText;
 	grid-area: del;
 	background: $keyBackground;
+	box-shadow: 0 5px 0 0 $keyShadow !important;
 }
