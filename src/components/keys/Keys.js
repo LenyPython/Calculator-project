@@ -2,18 +2,20 @@
 import './keys.css'
 import React from 'react';
 
+
 const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
 
   const numberClick = event => {
     let sign = event.target.innerText.toString()
-    if (value.length > 9) return
+    if (value.length > 8) return
     if (value === '0' || value === '') {
       if (sign === '.') setValue('0.')
       else setValue(sign)
     }
     else {
       if (sign === '.' & value.includes(sign)) return
-      setValue(value + sign)
+      let result = value + sign
+      setValue(result)
     }
   }
 

@@ -19,9 +19,7 @@
 	--btn-equals-shadow: hsl(6, 70%, 34%);
 }
 
-*{
-	transition: all 1s;
-}
+
 body {
 	&[data-theme=theme-2]{
 	--main-text: hsl(60, 10%, 19%);
@@ -81,9 +79,20 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+	min-width: 345px;
 	width: 550px;
 	height: 700px;
 	& > * {
 		margin: 10px 0;
 	}
+}
+
+@media(max-width: 601px){
+	body {
+		font-size: calc($fontSize /2)
+	}
+	.App {
+		width: 90vw;
+	}
+
 }

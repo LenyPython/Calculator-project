@@ -78,7 +78,7 @@ $btnHeight: 60px;
 	grid-area: dot;
 }
 .buttonText{
-	font-size: .7em !important;
+	font-size: .6em !important;
 	color: var(--btn-del-res-text) !important;
 	text-transform: uppercase;
 }
@@ -100,4 +100,10 @@ $btnHeight: 60px;
 	grid-area: del;
 	background: var(--btn-del-res-background) !important;
 	box-shadow: 0 5px 0 0 var(--btn-del-res-shadow) !important;
+}
+
+@media(max-width: 601px){
+	#keys{
+		gap: 15px;
+	}
 }

@@ -13,10 +13,6 @@
   --btn-equals-shadow: hsl(6, 70%, 34%);
 }
 
-* {
-  transition: all 1s;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -65,11 +61,22 @@ body[data-theme=theme-3] {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  min-width: 345px;
   width: 550px;
   height: 700px;
 }
 .App > * {
   margin: 10px 0;
+}
+
+@media (max-width: 601px) {
+  body {
+    font-size: calc($fontSize /2);
+  }
+
+  .App {
+    width: 90vw;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

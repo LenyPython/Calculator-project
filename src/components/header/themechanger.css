@@ -3,9 +3,12 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  transform: rotate(0);
+}
+#changer P {
+  margin-right: 30px;
 }
 #changer .themes {
-  margin-left: 30px;
   display: block;
   width: 75px;
   height: 30px;
@@ -15,15 +18,17 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -120%);
+  width: 75px;
+  position: absolute;
+  top: -80%;
 }
 #changer button {
   all: unset;
   cursor: pointer;
   font-size: 0.4em;
+  text-align: center;
+  height: 50px;
+  width: 20px;
   margin: 5px;
   background: transparent;
   border: none;
@@ -38,16 +43,26 @@
   position: relative;
   top: 5px;
   left: 5px;
-  transform: translateY(-120%);
   transition: all 0.3s;
 }
 #slider.pos-2 {
   left: 50%;
-  transform: translate(-50%, -120%);
+  transform: translateX(-50%);
 }
 #slider.pos-3 {
   left: 100%;
-  transform: translate(calc(-100% - 5px), -120%);
+  transform: translateX(calc(-100% - 5px));
+}
+
+@media (max-width: 601px) {
+  #changer {
+    transform: scale(90%);
+  }
+}
+@media (max-width: 450px) {
+  #changer {
+    transform: scale(80%);
+  }
 }
 
 /*# sourceMappingURL=themechanger.css.map */

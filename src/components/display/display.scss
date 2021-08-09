@@ -4,7 +4,7 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	min-height: 150px;
+	height: 150px;
 	box-sizing: border-box;
 	background: var(--screen-background);
 	border-radius: 10px;
@@ -18,5 +18,28 @@
 	.prevValue{
 		font-size: .6em;
 		align-self: flex-start;
+	}
+}
+
+@media(max-width: 601px) {
+	#display{
+		height: 120px;
+		.value{
+			font-size: 1.1em;
+		}
+		.prevValue {
+			font-size: .5em;
+		}
+	}
+}
+@media(max-width: 450px) {
+	#display{
+		height: 100px;
+		.value{
+			font-size: .8em;
+		}
+		.prevValue {
+			font-size: .3em;
+		}
 	}
 }
