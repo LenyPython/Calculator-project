@@ -14,11 +14,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-body[theme=theme2] {
+body[data-theme=theme-2] {
   --theme1-bg: #e6e6e6;
   --theme1-text: white;
 }
-body[theme=theme3] {
+body[data-theme=theme-3] {
   --theme1-bg: #160628;
   --theme1-text: white;
 }

@@ -1,0 +1,54 @@
+#changer {
+  --button-equals-background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+#changer .themes {
+  margin-left: 30px;
+  display: block;
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+}
+#changer .themes div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -120%);
+}
+#changer button {
+  all: unset;
+  cursor: pointer;
+  font-size: 0.4em;
+  margin: 5px;
+  background: transparent;
+  border: none;
+}
+
+#slider {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: var(--button-equals-background);
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  transform: translateY(-120%);
+  transition: all 0.3s;
+}
+#slider.pos-2 {
+  left: 50%;
+  transform: translate(-50%, -120%);
+}
+#slider.pos-3 {
+  left: 100%;
+  transform: translate(calc(-100% - 5px), -120%);
+}
+
+/*# sourceMappingURL=themechanger.css.map */

@@ -4,11 +4,11 @@
 body {
 	--theme1-bg: #{$mainBackground};
 	--theme1-text: #{$textWhite};
-	&[theme=theme2]{
+	&[data-theme=theme-2]{
 	--theme1-bg: #{$mainBackground2};
 	--theme1-text: #{$textWhite};
 	}
-	&[theme=theme3]{
+	&[data-theme=theme-3]{
 	--theme1-bg: #{$mainBackground3};
 	--theme1-text: #{$textWhite};
 	}
