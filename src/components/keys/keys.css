@@ -1,5 +1,5 @@
 #keys {
-  background: #232c43;
+  background: var(--toggle-background);
   width: 100%;
   border-radius: 10px;
   box-sizing: border-box;
@@ -15,11 +15,12 @@
   cursor: pointer;
   font-size: 32px;
   font-weight: 700;
-  color: #444b5a;
+  background: var(--btn-main-background);
+  color: var(--btn-main-text);
   width: 100%;
   height: 60px;
   border-radius: 10px;
-  box-shadow: 0 5px 0 0 #b4a597;
+  box-shadow: 0 5px 0 0 var(--btn-main-shadow);
   border: none;
 }
 
@@ -85,26 +86,27 @@
 
 .buttonText, #del, #clear, #equals {
   font-size: 0.7em !important;
-  color: white !important;
+  color: var(--btn-del-res-text) !important;
   text-transform: uppercase;
 }
 
 #equals {
   grid-area: equals;
-  background: #d03f2f;
-  box-shadow: 0 5px 0 0 #93261a !important;
+  color: var(--equals-btn-text) !important;
+  background: var(--btn-equals-background) !important;
+  box-shadow: 0 5px 0 0 var(--btn-equals-shadow) !important;
 }
 
 #clear {
   grid-area: reset;
-  background: #637097;
-  box-shadow: 0 5px 0 0 #404e72 !important;
+  background: var(--btn-del-res-background) !important;
+  box-shadow: 0 5px 0 0 var(--btn-del-res-shadow) !important;
 }
 
 #del {
   grid-area: del;
-  background: #637097;
-  box-shadow: 0 5px 0 0 #404e72 !important;
+  background: var(--btn-del-res-background) !important;
+  box-shadow: 0 5px 0 0 var(--btn-del-res-shadow) !important;
 }
 
 /*# sourceMappingURL=keys.css.map */

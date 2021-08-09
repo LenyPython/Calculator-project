@@ -3,7 +3,7 @@ $btnWidth: 100%;
 $btnHeight: 60px;
 
 #keys{
-	background: $toggleBackground;
+	background: var(--toggle-background);
 	width: 100%;
 	border-radius: 10px;
 	box-sizing: border-box;
@@ -23,11 +23,12 @@ $btnHeight: 60px;
 		cursor: pointer;
 		font-size: $fontSize;
 		font-weight: $fontWeight;
-		color: $textGrayish;
+		background: var(--btn-main-background);
+		color: var(--btn-main-text);
 		width: $btnWidth;
 		height: $btnHeight;
 		border-radius: 10px;
-		box-shadow: 0 5px 0 0 $keyShadowOther;
+		box-shadow: 0 5px 0 0 var(--btn-main-shadow);
 		border:none;
 	}
 }
@@ -78,24 +79,25 @@ $btnHeight: 60px;
 }
 .buttonText{
 	font-size: .7em !important;
-	color: $textWhite !important;
+	color: var(--btn-del-res-text) !important;
 	text-transform: uppercase;
 }
 #equals {
 	@extend.buttonText;
 	grid-area: equals;
-	background: $keyBackgroundToggle;
-	box-shadow: 0 5px 0 0 $keyShadowToggle !important;
+	color: var(--equals-btn-text) !important;
+	background: var(--btn-equals-background) !important;
+	box-shadow: 0 5px 0 0 var(--btn-equals-shadow) !important;
 }
 #clear {
 	@extend.buttonText;
 	grid-area: reset;
-	background: $keyBackground;
-	box-shadow: 0 5px 0 0 $keyShadow !important;
+	background: var(--btn-del-res-background) !important;
+	box-shadow: 0 5px 0 0 var(--btn-del-res-shadow) !important;
 }
 #del {
 	@extend.buttonText;
 	grid-area: del;
-	background: $keyBackground;
-	box-shadow: 0 5px 0 0 $keyShadow !important;
+	background: var(--btn-del-res-background) !important;
+	box-shadow: 0 5px 0 0 var(--btn-del-res-shadow) !important;
 }

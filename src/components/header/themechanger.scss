@@ -1,6 +1,5 @@
 
 #changer{
-	--button-equals-background: red;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -35,7 +34,7 @@
 	display: block;
 	width: 20px;
 	height: 20px;
-	background: var(--button-equals-background);
+	background: var(--btn-equals-background);
 	border-radius: 50%;
 	position: relative;
 	top: 5px;

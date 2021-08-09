@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 150px;
   box-sizing: border-box;
-  background: #182034;
+  background: var(--screen-background);
   border-radius: 10px;
   padding: 25px;
 }
