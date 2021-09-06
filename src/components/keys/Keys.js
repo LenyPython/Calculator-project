@@ -82,7 +82,7 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
   }
 
   return (
-    <div id='keys' theme='theme2'>
+    <div id='keys'>
       <button id='one' onClick={numberClick}>1</button>
       <button id='two' onClick={numberClick}>2</button>
       <button id='three' onClick={numberClick}>3</button>

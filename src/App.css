@@ -70,10 +70,6 @@ body[data-theme=theme-3] {
 }
 
 @media (max-width: 601px) {
-  body {
-    font-size: calc($fontSize /2);
-  }
-
   .App {
     width: 90vw;
   }
