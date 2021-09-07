@@ -102,8 +102,8 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
 
 
       <button id='equals' onClick={handleEquals}>=</button>
-      <button id='clear' onClick={reset} data-reset>Reset</button>
-      <button id='del' onClick={deleteNum}>Del</button>
+      <button id='clear' onClick={reset} data-reset>reset</button>
+      <button id='del' onClick={deleteNum}>del</button>
 
     </div>
   )
