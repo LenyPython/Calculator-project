@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Calculator-project/static/css/main.1eba2bcd.chunk.css",
-    "main.js": "/Calculator-project/static/js/main.15999c60.chunk.js",
-    "main.js.map": "/Calculator-project/static/js/main.15999c60.chunk.js.map",
-    "runtime-main.js": "/Calculator-project/static/js/runtime-main.a23abf80.js",
-    "runtime-main.js.map": "/Calculator-project/static/js/runtime-main.a23abf80.js.map",
-    "static/js/2.b73ff5c4.chunk.js": "/Calculator-project/static/js/2.b73ff5c4.chunk.js",
-    "static/js/2.b73ff5c4.chunk.js.map": "/Calculator-project/static/js/2.b73ff5c4.chunk.js.map",
+    "main.css": "/Calculator-project/static/css/main.13b474ec.chunk.css",
+    "main.js": "/Calculator-project/static/js/main.773097af.chunk.js",
+    "main.js.map": "/Calculator-project/static/js/main.773097af.chunk.js.map",
+    "runtime-main.js": "/Calculator-project/static/js/runtime-main.deda9278.js",
+    "runtime-main.js.map": "/Calculator-project/static/js/runtime-main.deda9278.js.map",
+    "static/js/2.b3ded163.chunk.js": "/Calculator-project/static/js/2.b3ded163.chunk.js",
+    "static/js/2.b3ded163.chunk.js.map": "/Calculator-project/static/js/2.b3ded163.chunk.js.map",
     "index.html": "/Calculator-project/index.html",
-    "static/css/main.1eba2bcd.chunk.css.map": "/Calculator-project/static/css/main.1eba2bcd.chunk.css.map",
-    "static/js/2.b73ff5c4.chunk.js.LICENSE.txt": "/Calculator-project/static/js/2.b73ff5c4.chunk.js.LICENSE.txt"
+    "static/css/main.13b474ec.chunk.css.map": "/Calculator-project/static/css/main.13b474ec.chunk.css.map",
+    "static/js/2.b3ded163.chunk.js.LICENSE.txt": "/Calculator-project/static/js/2.b3ded163.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a23abf80.js",
-    "static/js/2.b73ff5c4.chunk.js",
-    "static/css/main.1eba2bcd.chunk.css",
-    "static/js/main.15999c60.chunk.js"
+    "static/js/runtime-main.deda9278.js",
+    "static/js/2.b3ded163.chunk.js",
+    "static/css/main.13b474ec.chunk.css",
+    "static/js/main.773097af.chunk.js"
   ]
 }
