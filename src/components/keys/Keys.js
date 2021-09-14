@@ -6,7 +6,7 @@ import React from 'react';
 const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
 
   const numberClick = event => {
-    let sign = event.target.innerText.toString()
+    let sign = event.target.textContent.toString()
     if (value.length > 8) return
     if (value === '0' || value === '') {
       if (sign === '.') setValue('0.')
@@ -20,7 +20,7 @@ const Keys = ({calcMemo: {value, setValue, prevValue, setPrevValue}}) => {
   }
 
   const operationClick = event => {
-    let operation = event.target.innerText.toString()
+    let operation = event.target.textContent.toString()
     if (prevValue === '') {
       setPrevValue(value + operation)
       setValue('')
